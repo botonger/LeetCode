@@ -3,10 +3,10 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-    let dict = {}
+    let map = new Map()
     for (let i of nums){
-        if(i in dict) return true
-        else dict[i] = 1
+        if(map.has(i)) return true
+        else map.set(i, 1)
     }
     return false
     
