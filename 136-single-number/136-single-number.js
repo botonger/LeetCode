@@ -4,10 +4,14 @@
  */
 var singleNumber = function(nums) {
     if(nums.length === 1) return nums[0]
+    let sum = 0
     let aa = 1
 
-    return nums.sort((a,b)=> a-b).reduce((a,b)=>{
-        aa *= -1
-        return a + aa*b
-    })
+    nums.sort((a,b)=> a-b)
+    for(let i of nums){
+        sum += (aa*i)
+        aa *= (-1)
+    }
+    return sum
+    
 };
