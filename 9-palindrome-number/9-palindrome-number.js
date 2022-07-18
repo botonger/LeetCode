@@ -7,7 +7,6 @@ var isPalindrome = function(x) {
     
     let t = x
     let r = 0
-    let f = 1
     
     while(true){
         r = r * 10 + x % 10
@@ -15,5 +14,5 @@ var isPalindrome = function(x) {
         if(x === 0) break
     }
     
-    return r * f === t
+    return r === t
 };
