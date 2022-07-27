@@ -1,5 +1,7 @@
 
 var mergeTwoLists = function(list1, list2) {
+    if(!list1 && !list2) return null
+    
     head = curr = new ListNode(0)
     
     while (list1 && list2){
