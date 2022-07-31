@@ -8,6 +8,7 @@ var hammingDistance = function(x, y) {
     right = 31;
     count = 0;
     n = Math.log(Math.max(x, y))/Math.log(2);
+    
     while(true) {
         mid = Math.floor((left + right) / 2);
         if(mid === n) break;
